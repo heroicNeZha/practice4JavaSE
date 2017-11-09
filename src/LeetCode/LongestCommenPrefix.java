@@ -1,9 +1,7 @@
 package LeetCode;
-
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 /**
  * Created by Administrator on 2017/11/5.
+ * Write a function to find the longest common prefix string amongst an array of strings.
  */
 public class LongestCommenPrefix {
     public static void main(String[] args) {

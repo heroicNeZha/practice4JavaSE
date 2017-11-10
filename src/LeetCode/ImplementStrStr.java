@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class ImplementStrStr {
     public static void main(String[] args){
-        System.out.println(strStr("mississippi","issipi"));
+        System.out.println(strStr("mississippi","issi"));
     }
 
     public static int strStr(String haystack, String needle) {

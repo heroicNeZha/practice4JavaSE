@@ -15,7 +15,6 @@ public class byteStream {
         File file = new File("src" + File.separator + "IO" + File.separatorChar + "lzw.txt");
         byte[] OutBuffer = "test".getBytes();
         byte[] InBuffer = new byte[MAX_BUFFER_LENGTH];
-
         //断言文件所在目录一定存在
         assert file.getParentFile().exists();
         writeFile(file,(LINE_SEPARATOR+"enterTest").getBytes());
@@ -25,8 +24,10 @@ public class byteStream {
     private static void writeFile(File file,byte[] OutBuffer) {
         //写操作
         try(FileOutputStream fileOutputStream = new FileOutputStream(file,true)){
+
             fileOutputStream.write(OutBuffer);
             System.out.println("#write buffer success");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -35,10 +36,12 @@ public class byteStream {
     private static void readFile(File file, byte[] inBuffer) {
         //读操作
         try(FileInputStream fileInputStream = new FileInputStream(file)){
+
             while(fileInputStream.read(inBuffer)>0) {
                 System.out.println(new String(inBuffer));
             }
             System.out.println("#read buffer success");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

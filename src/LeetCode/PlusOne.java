@@ -24,6 +24,9 @@ public class PlusOne {
                     digits[i - 1]++;
                     digits[i] = 0;
                 }
+                else{
+                    return digits;
+                }
             }
             if (digits[0] > 9) {
                 digits[0]=0;

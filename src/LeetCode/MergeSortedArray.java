@@ -9,6 +9,7 @@ package LeetCode;
  * The number of elements initialized in nums1 and nums2 are m and n respectively.
  */
 public class MergeSortedArray {
-
-
+    public static void main(String[] args) {
+    }
 }
+

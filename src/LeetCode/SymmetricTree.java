@@ -24,26 +24,17 @@ package LeetCode;
 public class SymmetricTree {
 
     public boolean isSymmetric(TreeNode root) {
-        TreeNode leftNode = root.left;
-        TreeNode rightNode = root.right;
+        //递归算法
+        if(root==null) return true;
+        return isSymmetric(root.left,root.right);
+    }
 
-        while(leftNode!=null&&rightNode!=null){
+    public boolean isSymmetric(TreeNode p, TreeNode q) {
 
-            if (leftNode.left!=null&&rightNode.left!=null){
-                leftNode = leftNode.left;
-                rightNode = rightNode.left;
-            }
-
-            if (leftNode.right!=null&&rightNode.right!=null){
-                leftNode = leftNode.right;
-                rightNode = rightNode.right;
-            }
-
-        }
-
-        if(leftNode==null&&rightNode==null)
+        if (p == null && q == null)
             return true;
-        else
+        if (p == null || q == null)
             return false;
+            return p.val == q.val&&isSymmetric(p.left, q.right) && isSymmetric(p.right, q.left);
     }
 }

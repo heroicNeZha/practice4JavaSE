@@ -23,6 +23,7 @@ package LeetCode;
 
 public class SymmetricTree {
 
+
     public boolean isSymmetric(TreeNode root) {
         //递归算法
         if(root==null) return true;

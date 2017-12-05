@@ -1,4 +1,7 @@
-package ObjectOriented;
+package ObjectOriented.ABConstructor;
+
+import ObjectOriented.ABConstructor.A;
+import ObjectOriented.ABConstructor.B;
 
 /**
  * Created by Administrator on 2017/12/5.

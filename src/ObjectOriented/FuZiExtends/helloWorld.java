@@ -1,4 +1,4 @@
-package ObjectOriented;
+package ObjectOriented.FuZiExtends;
 
 public class helloWorld {
 	public static void main(String[] args) {

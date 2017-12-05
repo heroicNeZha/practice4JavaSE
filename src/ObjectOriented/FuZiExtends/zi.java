@@ -1,6 +1,8 @@
-package ObjectOriented;
+package ObjectOriented.FuZiExtends;
 
-public class zi extends fu{
+import ObjectOriented.FuZiExtends.fu;
+
+public class zi extends fu {
 	public zi() {
 		// TODO Auto-generated constructor stub
 		super("0");

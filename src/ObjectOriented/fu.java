@@ -1,4 +1,4 @@
-package HelloWorld;
+package ObjectOriented;
 
 public class fu{
 	

@@ -28,4 +28,19 @@ public class BalancedBinaryTree {
             return 60000;
         return Math.max(right,left)+1;
     }
+
+//    public boolean isBalanced(TreeNode root) {
+//        if(root == null) return true;
+//        int sub = treeLength(root.left)-treeLength(root.right);
+//        if(sub<-1||sub>1) return false;
+//        return isBalanced(root.left)&&isBalanced(root.right);
+//    }
+//
+//    public int treeLength(TreeNode root){
+//        if(root == null) return 0;
+//        if(root.left == null&& root.right == null) return 1;
+//        int left = treeLength(root.left);
+//        int right = treeLength(root.right);
+//        return Math.max(right,left)+1;
+//    }
 }

@@ -20,6 +20,16 @@ package LeetCode;
 public class BestTimetoBuyandSellStock {
 
     public int maxProfit(int[] prices) {
-
+        int sub = 0;
+        for(int i=0;i<prices.length;i++){
+            for(int j=i;j<prices.length;j++){
+                if(prices[j]>prices[i])
+                    if(sub<prices[j]-prices[i])
+                    {
+                        sub = prices[j]-prices[i];
+                    }
+            }
+        }
+        return sub;
     }
 }

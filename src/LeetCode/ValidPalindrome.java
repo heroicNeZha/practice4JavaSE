@@ -5,11 +5,27 @@ package LeetCode;
  */
 public class ValidPalindrome {
     public static void main(String[] args){
-        String s = "ab2a";
-        System.out.println(isPalindrome(s));
+        String s = "abba";
+        System.out.println(isPalindromeOnRecurrence(s));
     }
 
-    public static boolean isPalindrome(String s) {
+    private static boolean isPalindromeOnRecurrence(String s) {
+        if(s.equals("")) return true;
+        if(Character.isLetterOrDigit(s.charAt(0))){
+            if (Character.isLetterOrDigit(s.charAt(s.length()-1))){
+                if (Character.toLowerCase(s.charAt(0)) == Character.toLowerCase(s.charAt(s.length()-1))){
+                    return isPalindromeOnRecurrence(s.substring(1,s.length()-1));
+                }
+            }else{
+                return isPalindromeOnRecurrence(s.substring(0,s.length()-1));
+            }
+        }else{
+            return isPalindromeOnRecurrence(s.substring(1,s.length()-1));
+        }
+        return false;
+    }
+
+    private static boolean isPalindrome(String s) {
         if(s.equals("")) return true;
         for(int i = 0,j=s.length()-1;i<j;){
             if(Character.isLetterOrDigit(s.charAt(i))) {
